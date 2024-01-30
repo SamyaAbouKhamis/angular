@@ -4,6 +4,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PostComponent } from './post/post.component';
 
 
 export const routes: Routes = [
@@ -11,4 +12,5 @@ export const routes: Routes = [
    {'path':'about', component:AboutComponent},
    {'path':'contactus', component:ContactusComponent},
    {'path':'navbar', component:NavbarComponent}
+   
 ];

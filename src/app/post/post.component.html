@@ -1,0 +1,29 @@
+
+<table>
+  
+    <thead>
+      <tr>
+        <th class="m-5">ID</th>
+        
+        <th>TITLE</th>
+        <th>BODY</th>
+      </tr>
+    </thead>
+    <tbody>
+        @for(post of posts; track post.id){
+<tr>
+    <th>
+ {{post.id}}
+    </th>
+    <td>
+{{post.title}}
+    </td>
+    <td>
+        {{post.body}}
+    </td>
+</tr>
+}
+    </tbody>
+  </table>
+  
+  
