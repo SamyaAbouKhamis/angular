@@ -1,0 +1,6 @@
+<div class="search-product">
+    <input class="search-product-input" [value]="searchText" (input)="updateSearchText($event)">
+    <button class="btn btn-search">Search</button>
+
+</div>
+<div class="search-result-for"><p><strong>Search result for:</strong>{{searchText}}</p></div>

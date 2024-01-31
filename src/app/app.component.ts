@@ -5,13 +5,14 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PostComponent } from './post/post.component';
+import { SearchComponent } from './search/search.component';
 
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,NavbarComponent,PostComponent,HomeComponent],
+  imports: [RouterOutlet,NavbarComponent,PostComponent,HomeComponent,SearchComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
