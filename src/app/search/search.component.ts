@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'search',
   standalone: true,
@@ -8,6 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './search.component.css'
 })
 export class SearchComponent {
+
+
+
 
   searchText: string = "ggg";
 
