@@ -1,0 +1,27 @@
+.search-product{
+    margin: 20px auto;
+    text-align: center;
+}
+.search-product-input{
+    width: 40%;
+    height: 5.5vh;
+    padding: 1px 10px ;
+    outline: none;
+    border-radius: 2px;
+    background-color: rgb(216, 216, 226);
+    border: rgb(84, 8, 215);
+}
+.btn{
+    padding: 5px 10px;
+    border: none;
+}
+.btn-search{
+    padding: 12px;
+    background-color: black;
+    margin-left: -5px;
+    color: rgb(243, 253, 253);
+}
+.search-result-for{
+    margin: 12px;
+    padding: 10px 14px;
+}
