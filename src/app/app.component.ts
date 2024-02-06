@@ -10,6 +10,10 @@ import { CommonModule } from '@angular/common';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { AdminComponent } from './admin/admin.component';
 import { FamPipe } from './pipes/age.pipe';
+import { ReactiveComponent } from './reactive/reactive.component';
+import { TemlateComponent } from './temlate/temlate.component';
+
+
 
 
 
@@ -18,7 +22,9 @@ import { FamPipe } from './pipes/age.pipe';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,NavbarComponent,PostComponent,HomeComponent,SearchComponent,CommonModule,RxjsComponent,AdminComponent,FamPipe],
+  imports: [RouterOutlet,NavbarComponent,PostComponent,HomeComponent,SearchComponent,CommonModule,
+    RxjsComponent,AdminComponent,FamPipe,
+  ReactiveComponent,TemlateComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
