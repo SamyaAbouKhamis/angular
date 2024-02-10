@@ -2,6 +2,11 @@
 <search></search>
 
 <div>
+  
+    <div *ngFor="let post of posts">
+        <h2>{{post.title}}</h2>
+         <p>{{post.body}}</p> 
+    </div>
     <!-- <h2>Observable in Angular </h2>
     <div class="data-list" *ngFor="let x of data">
         {{x}}

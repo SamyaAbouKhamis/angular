@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ContactusComponent } from './contactus/contactus.component';
 import { HomeComponent } from './home/home.component';
@@ -12,6 +12,9 @@ import { AdminComponent } from './admin/admin.component';
 import { FamPipe } from './pipes/age.pipe';
 import { ReactiveComponent } from './reactive/reactive.component';
 import { TemlateComponent } from './temlate/temlate.component';
+import { CoreModule } from './core/core.module';
+import { MessageService } from './Services/message.service';
+import { HttpClient } from '@angular/common/http';
 
 
 
@@ -24,18 +27,32 @@ import { TemlateComponent } from './temlate/temlate.component';
   standalone: true,
   imports: [RouterOutlet,NavbarComponent,PostComponent,HomeComponent,SearchComponent,CommonModule,
     RxjsComponent,AdminComponent,FamPipe,
-  ReactiveComponent,TemlateComponent],
+  ReactiveComponent,TemlateComponent,CoreModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  providers:[MessageService ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Angular';
 
   data :any[]=[];
 
+  message :string[]=[];
+  posts :any[]=[];
+
  
+constructor(private messageServices:MessageService){
+  this.message= messageServices.getMessage();
+}
 
 
+ngOnInit(){
+this.messageServices.getPosts().subscribe({
+next:  (response)=>{this.posts=response},
+error:(error)=>{console.error(error)}
+
+});
+}
  
   
 //obervable
