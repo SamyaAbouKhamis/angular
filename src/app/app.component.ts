@@ -11,10 +11,9 @@ import { RxjsComponent } from './rxjs/rxjs.component';
 import { AdminComponent } from './admin/admin.component';
 import { FamPipe } from './pipes/age.pipe';
 import { ReactiveComponent } from './reactive/reactive.component';
-import { TemlateComponent } from './temlate/temlate.component';
-import { CoreModule } from './core/core.module';
 import { MessageService } from './Services/message.service';
 import { HttpClient } from '@angular/common/http';
+
 
 
 
@@ -27,7 +26,7 @@ import { HttpClient } from '@angular/common/http';
   standalone: true,
   imports: [RouterOutlet,NavbarComponent,PostComponent,HomeComponent,SearchComponent,CommonModule,
     RxjsComponent,AdminComponent,FamPipe,
-  ReactiveComponent,TemlateComponent,CoreModule],
+  ReactiveComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   providers:[MessageService ]
