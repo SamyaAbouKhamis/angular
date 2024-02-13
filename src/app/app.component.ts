@@ -1,4 +1,4 @@
-import { Component , OnInit} from '@angular/core';
+import { Component , OnInit,DoCheck} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ContactusComponent } from './contactus/contactus.component';
 import { HomeComponent } from './home/home.component';
@@ -13,8 +13,11 @@ import { FamPipe } from './pipes/age.pipe';
 import { ReactiveComponent } from './reactive/reactive.component';
 import { MessageService } from './Services/message.service';
 import { HttpClient } from '@angular/common/http';
-
-
+import { HooksComponent } from './hooks/hooks.component';
+import { DestroyComponent } from './destroy/destroy.component';
+import { DoCheckComponent } from './do-check/do-check.component';
+import { AfterContentComponent } from './after-content/after-content.component';
+import { AfterviewComponent } from './afterview/afterview.component';
 
 
 
@@ -25,7 +28,7 @@ import { HttpClient } from '@angular/common/http';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet,NavbarComponent,PostComponent,HomeComponent,SearchComponent,CommonModule,
-    RxjsComponent,AdminComponent,FamPipe,
+    RxjsComponent,AdminComponent,FamPipe,HooksComponent,DestroyComponent,DoCheckComponent,AfterContentComponent,AfterviewComponent,
   ReactiveComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -38,6 +41,8 @@ export class AppComponent implements OnInit {
 
   message :string[]=[];
   posts :any[]=[];
+
+ 
 
  
 constructor(private messageServices:MessageService){
@@ -79,4 +84,24 @@ myObservable = new Observable((observer)=>{
     }
     );
   }
+
+  //hooks ngonchange
+child:any="sending data from parent to child";
+
+ myFunc(val:any){
+this.child = val;
+ }
+//ng aftercontent
+ content: string='Box 1';
+
+
+  Func(){
+this.content="I am Box 1";
+  }
+//ng afterview
+demo:string="Hello";
+
+view(){
+  this.demo="I am clicked";
+}
 }

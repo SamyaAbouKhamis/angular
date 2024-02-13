@@ -7,10 +7,11 @@ import { TemlateComponent } from '../../temlate/temlate.component';
 
 
 @NgModule({
-  declarations: [ TemlateComponent],
+  declarations: [ ],
   imports: [
     CommonModule,
-    TemplateRoutingModule
+    TemplateRoutingModule,
+    TemlateComponent
   ]
 })
 export class TemplateModule { }
